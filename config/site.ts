@@ -5,65 +5,42 @@ export const siteConfig = {
   description: "Make beautiful websites regardless of your design experience.",
   navItems: [
     {
-      label: "Home",
-      href: "/",
+      label: "Kruszywa",
+      href: "/kruszywa",
     },
     {
-      label: "Docs",
-      href: "/docs",
+      label: "Roboty Ziemne",
+      href: "/roboty-ziemne",
     },
     {
-      label: "Pricing",
-      href: "/pricing",
+      label: "Transport",
+      href: "/transport",
     },
     {
-      label: "Blog",
-      href: "/blog",
-    },
-    {
-      label: "About",
-      href: "/about",
+      label: "Kontakt",
+      href: "/team",
     },
   ],
   navMenuItems: [
     {
-      label: "Profile",
-      href: "/profile",
+      label: "Kruszywa",
+      href: "/kruszywa",
     },
     {
-      label: "Dashboard",
-      href: "/dashboard",
+      label: "Roboty Ziemne",
+      href: "/roboty-ziemne",
     },
     {
-      label: "Projects",
-      href: "/projects",
+      label: "Transport",
+      href: "/transport",
     },
     {
-      label: "Team",
+      label: "Kontakt",
       href: "/team",
-    },
-    {
-      label: "Calendar",
-      href: "/calendar",
-    },
-    {
-      label: "Settings",
-      href: "/settings",
-    },
-    {
-      label: "Help & Feedback",
-      href: "/help-feedback",
-    },
-    {
-      label: "Logout",
-      href: "/logout",
     },
   ],
   links: {
-    github: "https://github.com/nextui-org/nextui",
     twitter: "https://twitter.com/getnextui",
-    docs: "https://nextui.org",
     discord: "https://discord.gg/9b6yyZKmH4",
-    sponsor: "https://patreon.com/jrgarciadev",
   },
 };
