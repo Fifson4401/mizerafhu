@@ -57,7 +57,7 @@ interface ServicesProps {
 
 const Services: React.FC<ServicesProps> = ({ data }) => {
   return (
-    <section className="py-8 md:py-16 bg-white">
+    <section className="py-8 md:py-16 bg-white" id='oferta'>
       <div className="container mx-auto px-2 sm:px-4">
         <h2 className="text-3xl font-bold mb-8 text-center">{data.title}</h2>
         <div className="flex flex-wrap justify-center gap-6">

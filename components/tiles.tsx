@@ -5,19 +5,19 @@ export default function Tiles() {
     {
       title: "Roboty ziemne",
       description: "Wykopy, niwelacja terenu, utrzymanie zimowe i utwardzanie dróg, wyburzenia",
-      link: "/podstrona1",
+      link: "/roboty-ziemne",
       svgPath: '/icons/home/excavator.svg'
     },
     {
       title: "Kruszywa",
       description: "Towary sypkie, kamienie pod budowe, gabiony, utwardzenia",
-      link: "/podstrona2",
+      link: "/kruszywa",
       svgPath: '/icons/home/rock.svg'
     },
     {
       title: "Transport",
       description: "Wywrotki 6x6 i 4x4, HDS, ciężarówki samozałodowawcze",
-      link: "/podstrona3",
+      link: "/transport",
       svgPath: '/icons/home/lorry.svg',
       size: 70
     }
