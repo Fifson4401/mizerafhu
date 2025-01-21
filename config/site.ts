@@ -1,5 +1,3 @@
-// site.config.ts
-
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
@@ -47,16 +45,16 @@ export const siteConfig = {
     discord: "https://discord.gg/9b6yyZKmH4",
   },
   contact: {
-    company: "F.h.u. mizera", // Dodana nazwa firmy
+    company: "F.h.u. mizera",
     phone: "+48123456789",
     email: "kontakt@firma.pl",
     address: {
-      street: "Ul. dębową 9", // Zaktualizowany adres
+      street: "Ul. dębową 9",
       city: "Wisła",
       postcode: "43-460",
     },
-    additionalAddress: "Ul. ustronska 22a", // Dodany dodatkowy adres
-    nip: "5481240096", // Dodany numer NIP
+    additionalAddress: "Ul. ustronska 22a",
+    nip: "5481240096",
     socialMedia: {
       facebook: "https://facebook.com/firma",
       linkedin: "https://linkedin.com/firma",
