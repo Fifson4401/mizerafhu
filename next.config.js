@@ -3,8 +3,8 @@ const deviceSizes = [320, 375, 575, 768, 1000, 1200, 1999]
 const minimumCacheTTL = 86400
 
 const nextConfig = {
-  output: 'export',
-  trailingSlash: true,
+  // output: 'export',
+  // trailingSlash: true,
   images: {
     remotePatterns: [
       {
@@ -14,7 +14,6 @@ const nextConfig = {
     ],
     deviceSizes,
     minimumCacheTTL,
-    unoptimized: true,
   },
 }
 

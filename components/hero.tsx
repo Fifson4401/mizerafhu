@@ -1,6 +1,6 @@
 import React from 'react';
-import { Image } from "@nextui-org/image";
-import { Button } from '@nextui-org/button';
+import { Image } from "@heroui/image";
+import { Button } from "@heroui/button";
 import Link from 'next/link';
 
 interface HeroProps {

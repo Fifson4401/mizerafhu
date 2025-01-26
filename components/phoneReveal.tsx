@@ -2,7 +2,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Button } from "@nextui-org/button";
+import { Button } from "@heroui/button";
 import { Eye, EyeOff } from "lucide-react";
 import { FaPhone } from 'react-icons/fa';
 

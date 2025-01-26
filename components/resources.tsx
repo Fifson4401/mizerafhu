@@ -1,8 +1,8 @@
 'use client'
 
 import React from 'react';
-import { Card, CardBody } from "@nextui-org/card";
-import { Accordion, AccordionItem } from "@nextui-org/accordion";
+import { Card, CardBody } from "@heroui/card";
+import { Accordion, AccordionItem } from "@heroui/accordion";
 import Image from 'next/image';
 import Rock from './rock';
 

@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Card } from '@nextui-org/card';
+import { Card } from "@heroui/card";
 import Image from 'next/image';
 
 export interface CardData {

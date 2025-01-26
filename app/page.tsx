@@ -11,7 +11,7 @@ export default function Home() {
         imageUrl="/images/home/home_hero.webp"
         imageAlt="Plac budowy z ciężarówkami"
         title="Roboty ziemne, kruszywa i szybki transport"
-        description={<>Zbudujmy razem <span className="text-[#d71728] font-extrabold">Twoją</span> przyszłość! Profesjonalne usługi budowlane na terenie Wisły i okolic.</>}
+        description={<>Zbudujmy razem <span className="text-[#0c0c0c] font-extrabold">Twoją</span> przyszłość! Profesjonalne usługi budowlane na terenie Wisły i okolic.</>}
         isButton={true}
         buttonText="Dzwonię od razu!"
       />

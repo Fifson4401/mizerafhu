@@ -16,7 +16,7 @@ export default function Tiles() {
     },
     {
       title: "Transport",
-      description: "Wywrotki 6x6 i 4x4, HDS, ciężarówki samozałodowawcze",
+      description: "Samochody 6x6 28t, 4x4 18t, HDS, ciągnik + naczepa 40t",
       link: "/transport",
       svgPath: '/icons/home/lorry.svg',
       size: 70
