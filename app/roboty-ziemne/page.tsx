@@ -25,7 +25,6 @@ export default function EarthWorksPage() {
 }
 
 const faqItems: FAQItem[] = [
-  // FAQ pozostaje bez zmian
   {
     category: "Roboty ziemne i wykopy",
     question: "Jakie są możliwości i wydajność koparki kołowej przy wykopach pod fundamenty?",
@@ -85,6 +84,5 @@ const servicesEarthworks: ServicesData = {
       title: 'Niwelacje Terenu i Wyburzenia',
       description: 'Oferujemy precyzyjną niwelację terenu oraz profesjonalne usługi wyburzeniowe. Nasze rozwiązania pozwalają na optymalne przygotowanie terenu pod budowę oraz bezpieczne i efektywne wyburzenie istniejących struktur.'
     },
-    // Dodaj więcej kart, upewniając się, że każdy `id` jest unikalny
   ]
 };

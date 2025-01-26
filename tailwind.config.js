@@ -71,6 +71,6 @@ module.exports = {
       },
     },
   },
-  darkMode: "class",
+  darkMode: false, // Tryb ciemny wyłączony
   plugins: [heroui()],
 };

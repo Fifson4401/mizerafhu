@@ -20,9 +20,13 @@ const HeaderSection: React.FC<HeaderSectionProps> = ({
     <header className="text-center py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full bg-white">
       <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight sm:leading-normal mb-4 sm:mb-6">
         {title}
-        {subtitle && <span className="block mt-2">{subtitle}</span>}
       </h1>
-      <p className="mb-6 sm:mb-10 max-w-prose mx-auto text-base sm:text-lg text-gray-700">
+      {subtitle && (
+        <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold  mb-4">
+          {subtitle}
+        </h2>
+      )}
+      <p className="mt-10 mb-6 sm:mb-10 max-w-prose mx-auto text-sm sm:text-base text-gray-700 leading-tight">
         {description}
       </p>
       <Link href={buttonLink} aria-label={buttonText}>

@@ -47,13 +47,13 @@ export const siteConfig = {
   contact: {
     company: "F.h.u. mizera",
     phone: "+48123456789",
-    email: "kontakt@firma.pl",
+    email: "kontakt@mizerafhu.pl",
     address: {
-      street: "Ul. dębową 9",
+      street: "Ul. Dębowa 9",
       city: "Wisła",
       postcode: "43-460",
     },
-    additionalAddress: "Ul. ustronska 22a",
+    additionalAddress: "Ul. Ustrońska 22a",
     nip: "5481240096",
     socialMedia: {
       facebook: "https://facebook.com/firma",

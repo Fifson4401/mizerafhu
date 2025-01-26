@@ -11,7 +11,7 @@ export default function TransportPage() {
         buttonText="Sprawdź ofertę"
         title="Transport i Logistyka Materiałów Budowlanych"
         subtitle="Profesjonalne usługi transportowe dla Twojej budowy"
-        description="Oferujemy kompleksowy transport materiałów budowlanych za pomocą wywrotek 6x6 oraz 4x4. Nasze usługi obejmują przewóz piasku, kruszyw, mieszanki kruszyw oraz innych materiałów, zapewniając szybkie i bezpieczne dostawy na plac budowy."
+        description="Terminowe dostawy, które wspierają płynność prac budowlanych. Dbamy o bezpieczny transport wszystkich materiałów, minimalizując ryzyko uszkodzeń. Dopasowujemy nasze usługi do indywidualnych potrzeb klienta, niezależnie od wielkości zlecenia."
       />
       <Services data={servicesTransport} />
       <CtaSection
@@ -68,8 +68,8 @@ const servicesTransport: ServicesData = {
     {
       id: 1,
       image: '/images/home/square1.webp',
-      title: 'Wywrotki 6x6 oraz 4x4 - 26.5t',
-      description: 'Oferujemy transport materiałów budowlanych za pomocą wywrotek 6x6 oraz 4x4. Nasze pojazdy zapewniają wysoką ładowność i dostępność nawet w trudno dostępnych miejscach, gwarantując szybkie i bezpieczne dostawy na plac budowy.'
+      title: 'Samochody 3.5t, 14t, 28t oraz 40t',
+      description: 'Oferujemy transport materiałów budowlanych samochodami 6x6 i 4x4, zapewniając wysoką ładowność oraz dostępność w trudno dostępnych miejscach. Gwarantujemy szybkie i bezpieczne dostawy na plac budowy. Dla większych zleceń używamy ciągników z naczepami 40t.'
     },
     {
       id: 2,
@@ -77,6 +77,5 @@ const servicesTransport: ServicesData = {
       title: 'Usługi HDS',
       description: 'Zapewniamy profesjonalne usługi HDS (Hydrauliczny Dźwig Samochodowy) do podnoszenia i transportu ciężkich materiałów na placu budowy. Nasze HDS są niezawodne i przystosowane do różnych zadań logistycznych.'
     },
-    // Dodaj więcej kart, upewniając się, że każdy `id` jest unikalny
   ]
 };
