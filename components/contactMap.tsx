@@ -32,7 +32,7 @@ const ContactMap: FC = () => {
         />
       </div>
 
-      <div className="md:w-1/2 w-full p-12 flex items-center justify-center bg-white">
+      <div className="md:w-1/2 w-full pt-10 md:p-12 flex items-center justify-center bg-white">
         <div className="w-full max-w-lg">
           <h2 className="text-3xl font-bold mb-4 text-center text-gray-800">Kontakt</h2>
           <hr className="mb-8 border-gray-300" />
