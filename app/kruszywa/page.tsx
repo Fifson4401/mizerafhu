@@ -19,7 +19,7 @@ export default function MaterialsPage() {
         description="Potrzebujesz profesjonalnych materiałów budowlanych? Skontaktuj się z nami, aby omówić szczegóły i uzyskać bezpłatną wycenę."
         title="Zaufaj Naszym Materiałom"
       />
-      <FAQSection faqItems={faqItems} title="Najczęściej zadawane pytania o materiały budowlane" />
+      {/* <FAQSection faqItems={faqItems} title="Najczęściej zadawane pytania o materiały budowlane" /> */}
     </>
   );
 }

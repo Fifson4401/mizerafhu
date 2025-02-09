@@ -19,7 +19,7 @@ export default function EarthWorksPage() {
         description="Potrzebujesz profesjonalnych usług ziemnych? Skontaktuj się z nami, aby omówić szczegóły i uzyskać bezpłatną wycenę."
         title="Zaufaj Naszym Ekspertom"
       />
-      <FAQSection faqItems={faqItems} title="Najczęściej zadawane pytania o roboty ziemne i wykopy" />
+      {/* <FAQSection faqItems={faqItems} title="Najczęściej zadawane pytania o roboty ziemne i wykopy" /> */}
     </>
   );
 }

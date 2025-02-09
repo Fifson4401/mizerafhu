@@ -19,10 +19,10 @@ export default function TransportPage() {
         description="Potrzebujesz niezawodnego transportu materiałów budowlanych? Skontaktuj się z nami, aby omówić szczegóły i uzyskać bezpłatną wycenę."
         title="Skorzystaj z naszych usług transportowych"
       />
-      <FAQSection
+      {/* <FAQSection
         faqItems={faqItems}
         title="Najczęściej zadawane pytania o transport i logistykę materiałów"
-      />
+      /> */}
     </>
   );
 }

@@ -57,27 +57,27 @@ const materialsData = {
       {
         title: "Tłuczeń 31.5-63mm",
         description: "Wykorzystywany do podbudów dróg i placów. Zapewnia stabilne podłoże.",
-        image: "/images/materials/piasek.webp",
+        image: "/images/materials/tluczen31-63.jpeg",
         imageAlt: "Kamienie o wielkości od szerokości kciuka (31.5mm) do szerokości czterech palców ułożonych obok siebie (63mm)."
       },
       {
         title: "Kliniec 4-8mm",
         description: "Idealny do klinowania większych frakcji kruszywa i wykonywania cieńszych warstw podbudowy.",
-        image: "/images/materials/piasek.webp",
+        image: "/images/materials/kliniec4.jpg",
 
         imageAlt: "Drobne kamyki wielkości od ziarna grochu (4mm) do szerokości połowy małego palca (8mm)."
       },
       {
         title: "Kliniec 8-16mm",
         description: "Stosowany do wykonywania podbudów drogowych i stabilizacji gruntu.",
-        image: "/images/materials/piasek.webp",
+        image: "/images/materials/kliniec16.jpg",
 
         imageAlt: "Kamienie o wielkości od szerokości połowy małego palca (8mm) do szerokości palca wskazującego (16mm)."
       },
       {
         title: "Kliniec 16-32mm",
         description: "Używany do wykonywania grubszych warstw podbudowy i drenażu.",
-        image: "/images/materials/piasek.webp",
+        image: "/images/materials/kliniec32.jpg",
 
         imageAlt: "Kamienie o wielkości od szerokości palca wskazującego (16mm) do szerokości dwóch palców ułożonych obok siebie (32mm)."
       }
@@ -91,14 +91,14 @@ const materialsData = {
       {
         title: "Mieszanka 0-63mm",
         description: "Uniwersalna mieszanka do wykonywania podbudów dróg i placów.",
-        image: "/images/materials/piasek.webp",
+        image: "/images/materials/mieszanka0-63.jpg",
 
         imageAlt: "Zróżnicowana mieszanka kruszywa od drobnego piasku (jak główka szpilki) do kamieni wielkości czterech palców ułożonych obok siebie (63mm)."
       },
       {
         title: "Mieszanka 0-31mm",
         description: "Idealna do wykonywania górnych warstw podbudowy i utwardzania powierzchni.",
-        image: "/images/materials/piasek.webp",
+        image: "/images/materials/mieszanka0-31.webp",
 
         imageAlt: "Mieszanka materiału od drobnego piasku do kamieni wielkości szerokości kciuka (31mm), z przewagą średnich frakcji."
       }
@@ -112,14 +112,14 @@ const materialsData = {
       {
         title: "Żwir 8-16mm",
         description: "Stosowany do produkcji betonu i jako materiał drenarski.",
-        image: "/images/materials/piasek.webp",
+        image: "/images/materials/zwir8-16.webp",
 
         imageAlt: "Zaokrąglone kamyki wielkości od małego palca (8mm) do szerokości palca wskazującego (16mm)."
       },
       {
         title: "Żwir 16-32mm",
         description: "Używany do drenażu i jako kruszywo do betonu konstrukcyjnego.",
-        image: "/images/materials/piasek.webp",
+        image: "/images/materials/zwir16-32.webp",
 
         imageAlt: "Okrągłe kamienie wielkości od palca wskazującego (16mm) do szerokości dwóch palców ułożonych obok siebie (32mm)."
       }
@@ -133,14 +133,14 @@ const materialsData = {
       {
         title: "Kora kamienna",
         description: "Dekoracyjne wykończenie rabat i ścieżek ogrodowych.",
-        image: "/images/materials/piasek.webp",
+        image: "/images/materials/korakamienna11-32.jpg",
 
         imageAlt: "Płaskie kamienie dekoracyjne o wielkości od paznokcia kciuka do szerokości całej dłoni (20-100mm), w różnych odcieniach."
       },
       {
         title: "Przesiewana ziemia",
         description: "Wysokiej jakości podłoże do zakładania ogrodów i trawników.",
-        image: "/images/materials/piasek.webp",
+        image: "/images/materials/przesiewziemia.webp",
 
         imageAlt: "Drobna, przesiana ziemia o konsystencji drobnego piasku, z widocznymi cząstkami organicznymi wielkości ziaren maku."
       }
@@ -154,14 +154,14 @@ const materialsData = {
       {
         title: "Kamień 63-180 (do gabionów)",
         description: "Wykorzystywany do wypełniania koszy gabionowych i tworzenia murów oporowych.",
-        image: "/images/materials/piasek.webp",
+        image: "/images/materials/gabion.jpg",
 
         imageAlt: "Duże kamienie od szerokości czterech palców ułożonych obok siebie (63mm) do szerokości całej dłoni (180mm)."
       },
       {
         title: "Kamień 120-350",
         description: "Do budowy większych konstrukcji gabionowych i umocnień skarp.",
-        image: "/images/materials/piasek.webp",
+        image: "/images/materials/gabion.jpg",
 
         imageAlt: "Bardzo duże kamienie od szerokości sześciu palców ułożonych obok siebie (120mm) do wielkości dwóch dłoni ułożonych obok siebie (350mm)."
       }
@@ -175,7 +175,7 @@ const materialsData = {
       {
         title: "Podmurówki do ogrodzeń",
         description: "Gotowe elementy betonowe do montażu ogrodzeń.",
-        image: "/images/materials/piasek.webp",
+        image: "/images/materials/podmurowka.jpg",
 
         imageAlt: "Betonowe elementy podmurówki o wysokości szerokości dłoni (około 100mm) i długości pięciu dłoni ułożonych obok siebie (około 700mm)."
       }
