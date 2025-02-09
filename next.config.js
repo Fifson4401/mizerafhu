@@ -14,6 +14,7 @@ const nextConfig = {
     ],
     deviceSizes,
     minimumCacheTTL,
+    unoptimized: true,
   },
 }
 
