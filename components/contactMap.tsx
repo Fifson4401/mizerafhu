@@ -1,104 +1,18 @@
 'use client';
 
 import { siteConfig } from '@/config/site';
-import { FC, useState } from 'react';
+import { FC } from 'react';
 import {
   FaPhone,
   FaEnvelope,
   FaBuilding,
   FaMapMarkerAlt,
   FaIdCard,
-  FaCopy, // Import ikony kopiowania
 } from 'react-icons/fa';
-import PhoneNumber from "./phoneReveal"; // Import komponentu PhoneNumber
+import InfoItem from './infoItem';
 
 const ContactMap: FC = () => {
   const { contact } = siteConfig;
-  const [copied, setCopied] = useState<boolean>(false); // Stan do śledzenia kopiowania
-
-  // Funkcja kopiująca tekst do schowka
-  const copyToClipboard = (text: string) => {
-    navigator.clipboard.writeText(text)
-      .then(() => {
-        setCopied(true);
-        setTimeout(() => setCopied(false), 2000); // Reset po 2 sekundach
-      })
-      .catch(err => {
-        console.error('Błąd kopiowania: ', err);
-      });
-  };
-
-  // Funkcja do wyświetlania danych lub placeholdera z linkami
-  const renderInfo = (
-    label: string,
-    value?: string,
-    icon?: React.ReactNode,
-    isLink: boolean = false
-  ) => {
-    let displayValue = value || 'Brak danych';
-    let href = '#';
-
-    if (label === 'Telefon' && value) {
-      href = `tel:${value}`;
-    } else if (label === 'Email' && value) {
-      href = `mailto:${value}`;
-    } else if (label === 'Adres' && value) {
-      const query = encodeURIComponent(`${contact.address.street}, ${contact.address.postcode} ${contact.address.city}`);
-      href = `https://www.google.com/maps/search/?api=1&query=${query}`;
-    }
-
-    return (
-      <div className="mb-6 flex items-start relative">
-        {icon && (
-          <span className="mr-4 text-xl text-[#DD2A1F] mt-1">
-            {icon}
-          </span>
-        )}
-        <div>
-          <p className="font-semibold text-lg">{label}:</p>
-          {isLink ? (
-            label === 'Telefon' ? (
-              <PhoneNumber phoneNumber={value!} /> // Użycie operatora !
-            ) : label === 'Adres' ? (
-              <a
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:underline"
-              >
-                {displayValue}
-              </a>
-            ) : label === 'Email' && value ? (
-              <div className="flex items-center">
-                <a href={href} className="text-blue-600 hover:underline mr-2">
-                  {displayValue}
-                </a>
-                <button
-                  onClick={() => copyToClipboard(value)}
-                  className="text-gray-500 hover:text-gray-700 focus:outline-none"
-                  aria-label="Kopiuj email"
-                >
-                  <FaCopy />
-                </button>
-                {copied && (
-                  <span className="ml-2 text-green-600 text-sm">
-                    Skopiowano!
-                  </span>
-                )}
-              </div>
-            ) : (
-              <a href={href} className="text-blue-600 hover:underline">
-                {displayValue}
-              </a>
-            )
-          ) : (
-            <p className="text-gray-700">{displayValue}</p>
-          )}
-        </div>
-      </div>
-    );
-  };
-
 
   return (
     <div className="p-4 sm:p-8 lg:p-16 flex flex-col md:flex-row bg-white rounded-lg overflow-hidden">
@@ -115,42 +29,41 @@ const ContactMap: FC = () => {
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
           title="Mapa lokalizacji firmy"
-        ></iframe>
+        />
       </div>
 
-      {/* Informacje kontaktowe */}
       <div className="md:w-1/2 w-full p-12 flex items-center justify-center bg-white">
         <div className="w-full max-w-lg">
           <h2 className="text-3xl font-bold mb-4 text-center text-gray-800">Kontakt</h2>
           <hr className="mb-8 border-gray-300" />
           <div>
-            {renderInfo('Firma', contact.company, <FaBuilding />)}
-            {renderInfo(
-              'Adres',
-              `${contact.address.street}, ${contact.address.postcode} ${contact.address.city}`,
-              <FaMapMarkerAlt />,
-              true
+            <InfoItem label="Firma" value={contact.company} icon={<FaBuilding />} />
+            <InfoItem
+              label="Adres"
+              value={`${contact.address.street}, ${contact.address.postcode} ${contact.address.city}`}
+              icon={<FaMapMarkerAlt />}
+              isLink
+            />
+            {contact.additionalAddress && (
+              <InfoItem
+                label="Adres dodatkowy"
+                value={contact.additionalAddress}
+                icon={<FaMapMarkerAlt />}
+              />
             )}
-            {contact.additionalAddress &&
-              renderInfo(
-                'Adres dodatkowy',
-                contact.additionalAddress,
-                <FaMapMarkerAlt />,
-                false
-              )}
-            {renderInfo('NIP', contact.nip, <FaIdCard />)}
-            {renderInfo(
-              'Telefon',
-              contact.phone,
-              <FaPhone />,
-              !!contact.phone
-            )}
-            {renderInfo(
-              'Email',
-              contact.email,
-              <FaEnvelope />,
-              !!contact.email
-            )}
+            <InfoItem label="NIP" value={contact.nip} icon={<FaIdCard />} />
+            <InfoItem
+              label="Telefon"
+              value={contact.phones}
+              icon={<FaPhone />}
+              isLink
+            />
+            <InfoItem
+              label="Email"
+              value={contact.email}
+              icon={<FaEnvelope />}
+              isLink
+            />
           </div>
         </div>
       </div>

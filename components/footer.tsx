@@ -8,7 +8,7 @@ const Footer: FC = () => {
   return (
     <footer className="bg-[#211A1E] text-white py-8">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Logo & Description */}
           <div className="flex flex-col items-center md:items-start">
             <Link href="/">
@@ -49,7 +49,8 @@ const Footer: FC = () => {
               <p>{siteConfig.contact.address.street}</p>
               <p>{siteConfig.contact.address.postcode} {siteConfig.contact.address.city}</p>
               <PhoneNumber
-                phoneNumber={siteConfig.contact.phone}
+                phoneNumbers={siteConfig.contact.phones}
+                variant="column"
               />
               <p>
                 <a
@@ -63,7 +64,7 @@ const Footer: FC = () => {
           </div>
 
           {/* Social Media */}
-          <div>
+          {/* <div>
             <h3 className="text-xl font-bold mb-4">Social Media</h3>
             <div className="flex flex-col space-y-2">
               {Object.entries(siteConfig.contact.socialMedia).map(([platform, url]) => (
@@ -78,7 +79,7 @@ const Footer: FC = () => {
                 </Link>
               ))}
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* Copyright */}

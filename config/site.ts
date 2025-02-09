@@ -45,8 +45,8 @@ export const siteConfig = {
     discord: "https://discord.gg/9b6yyZKmH4",
   },
   contact: {
-    company: "F.h.u. mizera",
-    phone: "+48123456789",
+    company: "F.h.u. Mizera",
+    phones: ["+48606976126", "+48600549105"],
     email: "kontakt@mizerafhu.pl",
     address: {
       street: "Ul. Dębowa 9",

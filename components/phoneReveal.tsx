@@ -4,30 +4,21 @@
 import { useState } from 'react';
 import { Button } from "@heroui/button";
 import { Eye, EyeOff } from "lucide-react";
-import { FaPhone } from 'react-icons/fa';
 
 interface PhoneNumberProps {
-  phoneNumber: string;
-  onReveal?: (phoneNumber: string, isRevealed: boolean) => void;
+  phoneNumbers: string[];
+  onReveal?: (phoneNumbers: string[], isRevealed: boolean) => void;
+  variant?: 'row' | 'column' | 'split';
 }
 
-const PhoneNumber = ({ phoneNumber, onReveal }: PhoneNumberProps) => {
+const PhoneNumber = ({ phoneNumbers, onReveal, variant = 'row' }: PhoneNumberProps) => {
   const [isRevealed, setIsRevealed] = useState(false);
 
   const formatPhoneNumber = (number: string) => {
-    // Usuwa wszystkie niepotrzebne znaki (spacje, myślniki itp.)
     const cleanNumber = number.replace(/\D/g, '');
-
-    // Sprawdza czy numer zaczyna się od 48 (kod kraju)
     const hasCountryCode = cleanNumber.startsWith('48');
-
-    // Wyodrębnia właściwy numer telefonu (bez kodu kraju)
     const phoneDigits = hasCountryCode ? cleanNumber.slice(2) : cleanNumber;
-
-    // Formatuje numer w grupy po 3 cyfry
     const formattedNumber = phoneDigits.replace(/(\d{3})(?=\d)/g, '$1 ');
-
-    // Dodaje prefix +48 jeśli był obecny
     return hasCountryCode ? `+48 ${formattedNumber}` : formattedNumber;
   };
 
@@ -35,33 +26,57 @@ const PhoneNumber = ({ phoneNumber, onReveal }: PhoneNumberProps) => {
     const newState = !isRevealed;
     setIsRevealed(newState);
     if (onReveal) {
-      onReveal(phoneNumber, newState);
+      onReveal(phoneNumbers, newState);
     }
   };
 
+  const variants = {
+    row: "flex items-center gap-4",
+    column: "flex flex-col gap-2",
+    split: "flex items-center gap-4"
+  };
+
+  const numbersContainerVariants = {
+    row: "flex items-center gap-4",
+    column: "flex flex-col gap-2",
+    split: "space-y-2"
+  };
+
+  const buttonVariants = {
+    row: "whitespace-nowrap",
+    column: "whitespace-nowrap w-fit",
+    split: "whitespace-nowrap self-center"
+  };
+
   return (
-    <div className="flex items-center gap-2">
-      {isRevealed ? (
-        <a
-          href={`tel:${phoneNumber}`}
-          className="font-medium text-blue-600 hover:underline"
-        >
-          {formatPhoneNumber(phoneNumber)}
-        </a>
-      ) : (
-        <span className="font-medium">
-          {formatPhoneNumber(phoneNumber.slice(0, 3))}
-          <span className="opacity-50"> XXX XXX XXX</span>
-        </span>
-      )}
+    <div className={variants[variant]}>
+      <div className={numbersContainerVariants[variant]}>
+        {phoneNumbers.map((phone, index) => (
+          <div key={phone}>
+            {isRevealed ? (
+              <a
+                href={`tel:${phone}`}
+                className="font-medium text-blue-600 hover:underline"
+              >
+                {formatPhoneNumber(phone)}
+              </a>
+            ) : (
+              <span className="font-medium">
+                {formatPhoneNumber(phone.slice(0, 3))}
+                <span className="opacity-50"> XXX XXX XXX</span>
+              </span>
+            )}
+          </div>
+        ))}
+      </div>
       <Button
         size="sm"
         color="primary"
         onClick={handleToggle}
-        className="whitespace-nowrap"
+        className={buttonVariants[variant]}
         endContent={isRevealed ? <EyeOff size={16} /> : <Eye size={16} />}
       >
-        {isRevealed ? 'Ukryj numer' : 'Pokaż numer'}
+        {isRevealed ? 'Ukryj numery' : 'Pokaż numery'}
       </Button>
     </div>
   );

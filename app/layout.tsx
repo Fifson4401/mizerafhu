@@ -30,7 +30,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pl" className="bg-background dark:bg-background-dark">
+    <html lang="pl" className="bg-background-dark/90">
       <head />
       <body className={clsx(
         "min-h-screen bg-background font-sans antialiased",
