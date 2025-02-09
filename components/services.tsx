@@ -38,11 +38,11 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
           quality={60}
         />
         <div className="absolute inset-0 bg-black/60 flex items-center justify-center flex-col p-4 text-white">
-          <h3 className="text-lg md:text-xl font-medium mb-2 text-center">
+          <h3 className="text-lg md:text-xl font-medium mb-6 text-center">
             {title}
           </h3>
           {description && (
-            <p className="text-sm md:text-base text-center line-clamp-4">
+            <p className="text-sm md:text-base text-center">
               {description}
             </p>
           )}
