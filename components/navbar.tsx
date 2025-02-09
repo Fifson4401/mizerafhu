@@ -1,3 +1,4 @@
+'use client'
 import {
   Navbar as NextUINavbar,
   NavbarContent,
@@ -12,23 +13,31 @@ import { link as linkStyles } from "@heroui/theme";
 import NextLink from "next/link";
 import clsx from "clsx";
 import { Image } from "@heroui/image";
-
 import { siteConfig } from "@/config/site";
-import {
-  TwitterIcon,
-  DiscordIcon,
-} from "@/components/icons";
+import { TwitterIcon, DiscordIcon } from "@/components/icons";
+import { useState } from "react";
 
 export const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleMenuItemClick = () => {
+    setIsMenuOpen(false);
+  };
 
   return (
-    <NextUINavbar maxWidth="xl" position="sticky" className="bg-[#000000de]">
+    <NextUINavbar
+      maxWidth="xl"
+      position="sticky"
+      className="bg-background-dark/90"
+      isMenuOpen={isMenuOpen}
+      onMenuOpenChange={setIsMenuOpen}
+    >
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
-          <NextLink className="flex justify-start items-center gap-1" href="/">
+          <NextLink className="flex justify-start items-center gap-1" href="/" onClick={handleMenuItemClick}>
             <Image
               src={siteConfig.logoWhitePath}
-              alt="Mizera logo"
+              alt="Logo"
               width={90}
               height={90}
               className="h-full w-auto min-w-12 object-contain py-1 md:py-0"
@@ -41,7 +50,7 @@ export const Navbar = () => {
               <NextLink
                 className={clsx(
                   linkStyles({ class: 'text-white' }),
-                  "data-[active=true]:text-primary data-[active=true]:font-medium",
+                  "data-[active=true]:text-primary data-[active=true]:font-medium"
                 )}
                 color="foreground"
                 href={item.href}
@@ -53,24 +62,8 @@ export const Navbar = () => {
         </ul>
       </NavbarContent>
 
-      {/* <NavbarContent
-        className="hidden sm:flex basis-1/5 sm:basis-full"
-        justify="end"
-      >
-        <NavbarItem className="hidden sm:flex gap-2">
-          <Link isExternal aria-label="Twitter" href={siteConfig.links.twitter}>
-            <TwitterIcon className="text-default-500" />
-          </Link>
-          <Link isExternal aria-label="Discord" href={siteConfig.links.discord}>
-            <DiscordIcon className="text-default-500" />
-          </Link>
-        </NavbarItem>
-      </NavbarContent> */}
-
       <NavbarContent className="lg:hidden basis-1 pl-4" justify="end">
-        <NavbarMenuToggle
-          className="text-white"
-        />
+        <NavbarMenuToggle className="text-white" />
       </NavbarContent>
 
       <NavbarMenu>
@@ -78,13 +71,10 @@ export const Navbar = () => {
           {siteConfig.navMenuItems.map((item, index) => (
             <NavbarMenuItem key={`${item}-${index}`}>
               <Link
-                color={
-                  index === 3
-                    ?
-                    "danger" : "foreground"
-                }
+                color={index === 3 ? "danger" : "foreground"}
                 href={item.href}
                 size="lg"
+                onPress={handleMenuItemClick}
               >
                 {item.label}
               </Link>

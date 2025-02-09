@@ -8,7 +8,7 @@ export interface CardData {
   id: number;
   image: string;
   title: string;
-  description?: string; // Opcjonalny opis
+  description?: string;
 }
 
 export interface ServicesData {
@@ -27,28 +27,29 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   title,
   description,
 }) => (
-  <div className="w-full sm:w-2/5 p-2">
+  <article className="w-full sm:w-[calc(50%-1rem)] p-2">
     <Card className="relative h-full overflow-hidden">
-      <div className="relative aspect-square max-h-[200px] sm:max-h-[250px] md:max-h-[300px]">
+      <div className="relative aspect-square max-h-[300px]">
         <Image
           src={image}
           alt={title}
           fill
-          aria-hidden="true"
           className="object-cover w-full h-full"
           quality={60}
         />
-        <div className="absolute inset-0 bg-black/60 flex items-center justify-center flex-col p-2 sm:p-4 text-white">
-          <h3 className="text-base sm:text-lg md:text-xl font-bold mb-1 sm:mb-2 text-center">
+        <div className="absolute inset-0 bg-black/60 flex items-center justify-center flex-col p-4 text-white">
+          <h3 className="text-lg md:text-xl font-medium mb-2 text-center">
             {title}
           </h3>
           {description && (
-            <p className="text-center text-sm sm:text-base">{description}</p>
+            <p className="text-sm md:text-base text-center line-clamp-4">
+              {description}
+            </p>
           )}
         </div>
       </div>
     </Card>
-  </div>
+  </article>
 );
 
 interface ServicesProps {
@@ -57,10 +58,19 @@ interface ServicesProps {
 
 const Services: React.FC<ServicesProps> = ({ data }) => {
   return (
-    <section className="py-8 md:py-16 bg-white" id='oferta'>
-      <div className="container mx-auto px-2 sm:px-4">
-        <h2 className="text-3xl font-bold mb-8 text-center">{data.title}</h2>
-        <div className="flex flex-wrap justify-center gap-6">
+    <section
+      className="py-8 md:py-12 bg-white"
+      id='oferta'
+      aria-labelledby="services-title"
+    >
+      <div className="container mx-auto px-4 max-w-5xl">
+        <h2
+          id="services-title"
+          className="text-xl md:text-2xl font-semibold mb-8 text-center"
+        >
+          {data.title}
+        </h2>
+        <div className="flex flex-wrap justify-center gap-4">
           {data.cards.map((card) => (
             <ServiceCard
               key={card.id}

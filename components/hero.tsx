@@ -21,7 +21,11 @@ const Hero: React.FC<HeroProps> = ({
   buttonText = "Dzwonię od razu!"
 }) => {
   return (
-    <section className="relative w-full mb-4 z-10 min-h-[500px]">
+    <section
+      className="relative w-full mb-4 z-10 min-h-[500px]"
+      role="banner"
+      aria-labelledby="hero-title"
+    >
       <Image
         src={imageUrl}
         alt={imageAlt}
@@ -32,45 +36,41 @@ const Hero: React.FC<HeroProps> = ({
         radius="none"
       />
 
-      {/* Gradient na dole */}
       <div
         aria-hidden
         className="absolute bottom-[-1px] left-0 w-full h-[25%] bg-gradient-to-b from-transparent to-[#ededed] z-10"
       />
-      {/* Treść nagłówka */}
+
       <div className='absolute w-full h-full top-0'>
-        <div className="container mx-auto px-6 sm:px-4 h-full relative">
-          <div
-            className="
+        <div className="container mx-auto px-4 h-full relative">
+          <div className="
             absolute z-20 bg-[#edededef] rounded-xl
-            p-6 md:p-8
+            p-4 md:p-6 lg:p-8
             top-[10%] sm:top-[15%] md:top-[20%] lg:top-[30%]
-            w-full sm:w-auto
+            w-[calc(100%-2rem)] sm:w-auto
             max-w-full md:max-w-[60%] lg:max-w-[45%]
-            right-0 md:right-[1.8%]
+            right-4 md:right-[1.8%]
             transition-all duration-300
-          "
-          >
+          ">
             <header className="px-4 sm:px-0">
-              <h1 className="
-                text-[#343434] font-extrabold
-                text-2xl sm:text-3xl 
-                leading-snug sm:leading-tight md:leading-snug lg:leading-tight
-              ">
+              <h1
+                id="hero-title"
+                className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#343434] leading-snug"
+              >
                 {title}
               </h1>
-              {!!description && <h2 className="
-                text-[#343434] font-medium mt-5 mb-8
-                text-base sm:text-lg
-                leading-normal sm:leading-relaxed md:leading-normal lg:leading-relaxed
-              ">
-                {description}
-              </h2>}
+
+              {!!description && (
+                <p className="text-sm sm:text-base lg:text-lg font-normal text-[#343434] mt-5 mb-8 leading-normal">
+                  {description}
+                </p>
+              )}
+
               {isButton && (
-                <Link href="/kontakt">
+                <Link href="/kontakt" aria-label={buttonText}>
                   <Button
                     size='lg'
-                    className='bg-[#FFAF01] font-bold shadow-xl transition-all duration-200 transform hover:-translate-y-0.5'
+                    className='bg-[#FFAF01] font-bold shadow-xl transition-all duration-200 transform hover:-translate-y-0.5 focus:ring-2 focus:ring-offset-2 focus:ring-[#FFAF01]'
                   >
                     {buttonText}
                   </Button>

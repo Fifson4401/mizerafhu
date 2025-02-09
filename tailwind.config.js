@@ -14,19 +14,27 @@ module.exports = {
         mono: ["var(--font-mono)"],
       },
       colors: {
-        background: "#ededed",
-        foreground: "#211A1E",
+        background: {
+          DEFAULT: "#ededed",
+          dark: "#111111"
+        },
+        foreground: {
+          DEFAULT: "#211A1E",
+          dark: "#ffffff"
+        },
         primary: {
           DEFAULT: "#FFAF01",
+          dark: "#FFD04D",
           foreground: "#211A1E",
         },
         secondary: {
           DEFAULT: "#7ab1b8",
+          dark: "#90CAD1",
           foreground: "#211A1E",
         },
-        dupanary: {
-          DEFAULT: "#7ab1b8",
-          foreground: "#211A1E",
+        container: {
+          DEFAULT: "#ffffff",
+          dark: "#1a1a1a"
         },
         focus: "#F182F6",
       },
@@ -35,7 +43,7 @@ module.exports = {
       },
       animation: {
         'fade-scroll': 'fade-scroll 40s linear infinite',
-        'stripe-slide-slow': 'stripe-slide 3s linear infinite', // zwiększone z 2s na 3s
+        'stripe-slide-slow': 'stripe-slide 3s linear infinite',
       },
       keyframes: {
         'stripe-slide': {
@@ -43,34 +51,16 @@ module.exports = {
           '100%': { transform: 'translateX(500%)' },
         },
         'fade-scroll': {
-          '0%': {
-            transform: 'translateX(0)',
-            opacity: '1'
-          },
-          '85%': {
-            transform: 'translateX(-45%)',
-            opacity: '1'
-          },
-          '95%': {
-            transform: 'translateX(-50%)',
-            opacity: '0'
-          },
-          '96%': {
-            transform: 'translateX(0)',
-            opacity: '0'
-          },
-          '98%': {
-            transform: 'translateX(0)',
-            opacity: '1'
-          },
-          '100%': {
-            transform: 'translateX(0)',
-            opacity: '1'
-          },
+          '0%': { transform: 'translateX(0)', opacity: '1' },
+          '85%': { transform: 'translateX(-45%)', opacity: '1' },
+          '95%': { transform: 'translateX(-50%)', opacity: '0' },
+          '96%': { transform: 'translateX(0)', opacity: '0' },
+          '98%': { transform: 'translateX(0)', opacity: '1' },
+          '100%': { transform: 'translateX(0)', opacity: '1' },
         },
       },
     },
   },
-  darkMode: false, // Tryb ciemny wyłączony
   plugins: [heroui()],
+  darkMode: 'false',
 };
