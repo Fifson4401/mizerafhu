@@ -47,7 +47,7 @@ export const siteConfig = {
   contact: {
     company: "F.h.u. Mizera",
     phones: ["+48606976126", "+48600549105"],
-    email: "kontakt@mizerafhu.pl",
+    email: "kontakt@ztmizera.pl",
     address: {
       street: "Ul. Dębowa 9",
       city: "Wisła",
