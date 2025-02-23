@@ -61,6 +61,15 @@ module.exports = {
       },
     },
   },
-  plugins: [heroui()],
+  plugins: [heroui(), function ({ addUtilities }) {
+    addUtilities({
+      '.forced-color-none': {
+        'forced-color-adjust': 'none',
+      },
+      '.color-scheme-light': {
+        'color-scheme': 'light',
+      },
+    });
+  }],
   darkMode: 'false',
 };

@@ -34,13 +34,13 @@ export const Navbar = () => {
     >
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
-          <NextLink className="flex justify-start items-center gap-1" href="/" onClick={handleMenuItemClick}>
+          <NextLink className="flex justify-start items-center gap-1 forced-color-none" href="/" onClick={handleMenuItemClick} style={{ forcedColorAdjust: 'none' }}>
             <Image
-              src={siteConfig.logoWhitePath}
+              src={siteConfig.logoPath}
               alt="Logo"
               width={90}
               height={90}
-              className="h-full w-auto min-w-12 object-contain py-1 md:py-0"
+              className="h-full w-auto min-w-12 object-contain py-1 md:py-0 forced-color-none"
             />
           </NextLink>
         </NavbarBrand>

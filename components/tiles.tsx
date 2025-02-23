@@ -30,21 +30,21 @@ export default function Tiles() {
 
   return (
     <section
-      className="relative z-30 py-8 md:py-16"
+      className="relative z-30 py-8 md:py-16 forced-color-none"
       style={{
         background: 'linear-gradient(to bottom, transparent 0%, white 100%)',
         marginTop: '-5rem'
       }}
     >
-      <div className="container mx-auto px-6 sm:px-4">
+      <div className="container mx-auto px-6 sm:px-4 forced-color-none">
         {rows.map((row, rowIndex) => (
           <div
             key={rowIndex}
-            className={`flex flex-wrap ${row.length < 3 ? 'justify-center' : 'justify-between'
+            className={`forced-color-none flex flex-wrap ${row.length < 3 ? 'justify-center' : 'justify-between'
               } gap-y-8 ${rowIndex > 0 ? 'mt-8' : ''}`}
           >
             {row.map((tile, index) => (
-              <div key={index} className="w-full px-4 sm:px-0 sm:w-[260px] md:w-[300px]">
+              <div key={index} className="w-full px-4 sm:px-0 sm:w-[260px] md:w-[300px] forced-color-none">
                 <Tile
                   title={tile.title}
                   description={tile.description}

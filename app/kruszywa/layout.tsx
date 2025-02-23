@@ -4,7 +4,7 @@ export default function DocsLayout({
   children: React.ReactNode;
 }) {
   return (
-    <section className="bg-white">
+    <section className="bg-white forced-color-none">
       {children}
     </section>
   );

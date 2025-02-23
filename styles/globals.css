@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.no-darkmode,
+.no-darkmode * {
+  forced-color-adjust: none !important;
+  color-scheme: light !important;
+}
+
+:root {
+  forced-color-adjust: none !important;
+  color-scheme: light only !important;
+}

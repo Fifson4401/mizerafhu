@@ -17,8 +17,8 @@ const HeaderSection: React.FC<HeaderSectionProps> = ({
   buttonLink,
 }) => {
   return (
-    <header className="text-center py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full bg-white">
-      <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight sm:leading-normal mb-4 sm:mb-6">
+    <header className="text-center py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full bg-white forced-color-none">
+      <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight sm:leading-normal mb-4 sm:mb-6 forced-color-none">
         {title}
       </h1>
       {subtitle && (
@@ -32,7 +32,7 @@ const HeaderSection: React.FC<HeaderSectionProps> = ({
       <Link href={buttonLink} aria-label={buttonText}>
         <Button
           size="lg"
-          className="bg-[#FFAF01] hover:bg-[#E69E00] font-bold shadow-xl transition-all duration-200 transform hover:-translate-y-0.5 focus:ring-2 focus:ring-offset-2 focus:ring-[#FFAF01] focus:outline-none"
+          className="bg-[#FFAF01] hover:bg-[#E69E00] font-bold shadow-xl transition-all duration-200 transform hover:-translate-y-0.5 focus:ring-2 focus:ring-offset-2 focus:ring-[#FFAF01] focus:outline-none forced-color-none"
         >
           {buttonText}
         </Button>

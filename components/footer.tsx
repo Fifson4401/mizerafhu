@@ -10,14 +10,16 @@ const Footer: FC = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Logo & Description */}
-          <div className="flex flex-col items-center md:items-start">
-            <Link href="/">
+          <div className="flex flex-col items-center md:items-start forced-color-none " style={{ forcedColorAdjust: 'none' }}>
+            <Link href="/" className="forced-color-none">
               <Image
-                src={siteConfig.logoWhitePath}
+                src={siteConfig.fullLogoPath}
                 alt={siteConfig.name}
                 width={150}
                 height={50}
-                className="mb-4"
+                className="mb-4 forced-color-none"
+                style={{ forcedColorAdjust: 'none' }}
+
               />
             </Link>
             <p className="text-sm text-gray-400 mt-2">

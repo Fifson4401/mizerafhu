@@ -50,18 +50,18 @@ const Hero: React.FC<HeroProps> = ({
             w-[calc(100%-2rem)] sm:w-auto
             max-w-full md:max-w-[60%] lg:max-w-[45%]
             right-4 md:right-[1.8%]
-            transition-all duration-300
+            transition-all duration-300 forced-color-none
           ">
-            <header className="px-4 sm:px-0">
+            <header className="px-4 sm:px-0 forced-color-none">
               <h1
                 id="hero-title"
-                className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#343434] leading-snug"
+                className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#343434] leading-snug forced-color-none"
               >
                 {title}
               </h1>
 
               {!!description && (
-                <p className="text-sm sm:text-base lg:text-lg font-normal text-[#343434] mt-5 mb-8 leading-normal">
+                <p className="text-sm sm:text-base lg:text-lg font-normal text-[#343434] mt-5 mb-8 leading-normal forced-color-none">
                   {description}
                 </p>
               )}
@@ -70,7 +70,7 @@ const Hero: React.FC<HeroProps> = ({
                 <Link href="/kontakt" aria-label={buttonText}>
                   <Button
                     size='lg'
-                    className='bg-[#FFAF01] font-bold shadow-xl transition-all duration-200 transform hover:-translate-y-0.5 focus:ring-2 focus:ring-offset-2 focus:ring-[#FFAF01]'
+                    className='bg-[#FFAF01] font-bold shadow-xl transition-all duration-200 transform hover:-translate-y-0.5 focus:ring-2 focus:ring-offset-2 focus:ring-[#FFAF01] forced-color-none'
                   >
                     {buttonText}
                   </Button>

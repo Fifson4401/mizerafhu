@@ -61,6 +61,6 @@ export const siteConfig = {
       instagram: "https://instagram.com/firma",
     },
   },
-  logoBlackPath: "/logo_black.png",
-  logoWhitePath: "/logo_white.png",
+  logoPath: "/mizera_logo.png",
+  fullLogoPath: "/mizera_logo_full.png",
 };

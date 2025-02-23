@@ -1,3 +1,4 @@
+import { siteConfig } from "@/config/site";
 import { Card } from "@heroui/card";
 import Image from 'next/image';
 import React from 'react';
@@ -48,7 +49,7 @@ const companyData: CompanyData = {
     }
   ],
   about: {
-    logo: '/logo_black.png',
+    logo: siteConfig.logoPath,
     title: '20 lat doświadczenia',
     description: 'Wieloletnie doświadczenie w branży budowlanej pozwala nam realizować nawet najbardziej wymagające projekty. Każde zlecenie traktujemy indywidualnie, dostosowując nasze usługi do specyficznych potrzeb klienta. Oferujemy atrakcyjne ceny przy zachowaniu najwyższej jakości usług.'
   }

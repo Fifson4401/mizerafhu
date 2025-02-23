@@ -19,9 +19,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "white" },
-  ],
+  themeColor: "light only",
 };
 
 export default function RootLayout({
@@ -30,18 +28,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pl" className="bg-background-dark/90">
+    <html lang="pl" className="bg-background-dark/90 forced-color-none" style={{ forcedColorAdjust: 'none' }}>
       <head />
       <body className={clsx(
-        "min-h-screen bg-background font-sans antialiased",
-        fontSans.variable
-      )}>
-        <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
+        "min-h-screen bg-background font-sans antialiased forced-color-none",
+        fontSans.variable,
+      )}
+        style={{ forcedColorAdjust: 'none' }}>
+        <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
           <div className="min-h-screen flex flex-col">
             <header>
               <Navbar />
             </header>
-            <main className="flex-grow">
+            <main className="flex-grow forced-color-none" style={{ forcedColorAdjust: 'none' }}>
               {children}
             </main>
             <footer>

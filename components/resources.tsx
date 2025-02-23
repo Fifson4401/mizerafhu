@@ -43,7 +43,7 @@ const materialsData = {
       },
       {
         title: "Piasek budowlany szczakowa (żółty)",
-        description: "Stosowany do wylewek, zapraw murarskich i tynkarskich. Świetnie sprawdza się jako wypełnienie piaskownic.",
+        description: "Stosowany do tynkowania i murowania. Świetnie sprawdza się jako wypełnienie piaskownic.",
         image: "/images/materials/piasek2.jpg",
         imageAlt: "Żółty piasek o zróżnicowanej granulacji, pojedyncze ziarna wielkości od główki szpilki do 1/4 szerokości paznokcia (0-4mm)."
       }
@@ -76,7 +76,7 @@ const materialsData = {
       },
       {
         title: "Kliniec 16-32mm",
-        description: "Używany do wykonywania grubszych warstw podbudowy i drenażu.",
+        description: "Używany do wykonywania grubszych warstw podbudowy.",
         image: "/images/materials/kliniec32.jpg",
 
         imageAlt: "Kamienie o wielkości od szerokości palca wskazującego (16mm) do szerokości dwóch palców ułożonych obok siebie (32mm)."
@@ -224,13 +224,13 @@ const MaterialCard: React.FC<MaterialCardProps> = ({
 const MaterialsCatalog = () => {
   return (
     <main
-      className="w-full pt-8 md:pt-16"
+      className="w-full pt-8 md:pt-16 forced-color-none"
       role="main"
       aria-label="Katalog materiałów budowlanych"
       id='oferta'
     >
-      <div className="container mx-auto px-4 max-w-7xl" >
-        <div className="relative">
+      <div className="container mx-auto px-4 max-w-7xl forced-color-none" >
+        <div className="relative forced-color-none">
           {/* Lewe elementy */}
           <Rock imageUrl='rock3.webp' style={{ left: '15%' }} />
           <Rock imageUrl='rock5.webp' style={{ left: '35%' }} />
@@ -239,13 +239,13 @@ const MaterialsCatalog = () => {
           <Rock imageUrl='rock6.webp' style={{ right: '15%' }} isRight />
           <Rock imageUrl='rock8.webp' style={{ right: '35%' }} isRight />
 
-          <h2 className='text-5xl text-center font-semibold mb-20 relative z-10'>Oferta</h2>
+          <h2 className='text-5xl text-center font-semibold mb-20 relative z-10 forced-color-none'>Oferta</h2>
         </div>
 
         <Accordion
           variant="shadow"
           selectionMode="multiple"
-          className="mb-8 [&>div]:border-black"
+          className="mb-8 [&>div]:border-black forced-color-none"
           itemClasses={{
             base: "w-full",
             title: "text-xl font-medium",
